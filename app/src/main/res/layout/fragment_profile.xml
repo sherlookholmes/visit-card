@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@xml/background_activity"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layoutDirection="rtl"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/lin_title"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:elevation="2dp"
+                    android:theme="@style/PrimaryButton">
+
+                    <ui_element.MyButton
+                        android:id="@+id/btn_cat"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimary"
+                        android:textSize="@dimen/body_font_size" />
+
+                    <ui_element.MyTextView
+                        android:id="@+id/txt_cat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:alpha="@dimen/subhedingalpha"
+                        android:text="انتخاب"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <ui_element.MyTextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:alpha="@dimen/subhedingalpha"
+                android:gravity="right"
+                android:text="رسته شغلی"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:alpha="0.12"
+                android:background="@color/colorBlack"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/lin_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ui_element.MyTextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:alpha="@dimen/subhedingalpha"
+                android:gravity="right"
+                android:text="محل کسب و کار"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+            <LinearLayout
+                android:id="@+id/lin_location"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="0dp"
+                android:layout_marginStart="0dp"
+                app:layout_constraintStart_toStartOf="@+id/lin_title"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:elevation="2dp"
+                    android:theme="@style/PrimaryButton">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_location"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimary" />
+
+                    <ui_element.MyTextView
+                        android:id="@+id/txt_province"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:alpha="@dimen/subhedingalpha"
+                        android:text="استان"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_city"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="0dp"
+                android:layout_marginStart="0dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/lin_title"
+                app:layout_constraintTop_toBottomOf="@+id/lin_location">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_city"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimary" />
+
+                    <ui_element.MyTextView
+                        android:id="@+id/txt_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:alpha="@dimen/subhedingalpha"
+                        android:text="شهر"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:alpha="0.12"
+                android:background="@color/colorBlack"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/linearLayout"
+                app:layout_constraintStart_toStartOf="@id/linearLayout"
+                app:layout_constraintTop_toBottomOf="@+id/lin_city" />
+
+            <ui_element.MyTextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:alpha="@dimen/subhedingalpha"
+                android:gravity="right"
+                android:text="تصویر"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+            <ui_element.MyTextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="16dp"
+                android:alpha="@dimen/captionalpha"
+                android:gravity="right"
+                android:text="برای انتخاب تصویر کارت ویزیت یا محل کار خود، روی آن کلیک کنید"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <ImageView
+                android:id="@+id/img_upload"
+                android:layout_width="74dp"
+                android:layout_height="74dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_add_a_photo_black_24dp"
+                app:layout_constraintStart_toStartOf="@id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:alpha="0.12"
+                android:background="@color/colorBlack"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/linearLayout"
+                app:layout_constraintStart_toStartOf="@id/linearLayout"
+                app:layout_constraintTop_toBottomOf="@+id/img_upload" />
+
+            <ui_element.MyTextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:alpha="@dimen/subhedingalpha"
+                android:gravity="right"
+                android:text="نوع آگهی"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+            <ui_element.MyTextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="20dp"
+                android:alpha="@dimen/subhedingalpha"
+                android:gravity="right"
+                android:text="ارائه"
+                android:textColor="@color/gray_dark"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <ui_element.MyTextView
+                android:id="@+id/txt7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:alpha="@dimen/subhedingalpha"
+                android:gravity="right"
+                android:text="درخواستی"
+                android:textColor="@color/gray_dark"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/textView6"
+                app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+            <RadioGroup
+                android:id="@+id/myRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginStart="0dp"
+                android:checkedButton="@+id/sound"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/txt7"
+                app:layout_constraintEnd_toEndOf="@id/lin_location"
+                app:layout_constraintTop_toTopOf="@+id/textView6">
+
+                <RadioButton
+                    android:id="@+id/radio_presentation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout4" />
+
+                <RadioButton
+                    android:id="@+id/radio_for_sale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:alpha="0.12"
+                android:background="@color/colorBlack"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/linearLayout"
+                app:layout_constraintStart_toStartOf="@id/linearLayout"
+                app:layout_constraintTop_toBottomOf="@+id/myRadioGroup" />
+
+            <ui_element.MyTextView
+                android:id="@+id/txt_province"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:alpha="@dimen/subhedingalpha"
+                android:gravity="right"
+                android:text="قیمت"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+
+            <ui_element.MyTextView
+                android:id="@+id/txt8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:alpha="@dimen/subhedingalpha"
+                android:gravity="right"
+                android:text="نوع"
+                android:textColor="@color/gray_dark"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/txt_province" />
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/gray_dark"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/txt8"
+                app:layout_constraintTop_toBottomOf="@+id/txt8" />
+
+            <LinearLayout
+                android:id="@+id/lin_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/spinner1">
+
+                <ui_element.MyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginStart="24dp"
+                    android:alpha="@dimen/subhedingalpha"
+                    android:text="مقدار"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="12sp" />
+
+                <ui_element.MyEditText
+                    android:id="@+id/edt_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginStart="16dp"
+                    android:gravity="right"
+                    android:hint="10000 تومان"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_line"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:alpha="0.12"
+                android:background="@color/colorBlack"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/linearLayout"
+                app:layout_constraintStart_toStartOf="@id/linearLayout"
+                app:layout_constraintTop_toBottomOf="@+id/lin_price" />
+
+            <ui_element.MyTextView
+                android:id="@+id/txt9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:alpha="@dimen/subhedingalpha"
+                android:gravity="right"
+                android:text="عنوان شغل"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/lin_line" />
+
+            <ui_element.MyEditText
+                android:id="@+id/edt_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                android:gravity="right"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:textColor="@color/gray_dark"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/txt9" />
+
+            <ui_element.MyTextView
+                android:id="@+id/txt13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:alpha="@dimen/subhedingalpha"
+                android:gravity="right"
+                android:text="توضیحات"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/edt_title" />
+
+            <ui_element.MyEditText
+                android:id="@+id/edt_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:textColor="@color/gray_dark"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/edt_title"
+                app:layout_constraintStart_toStartOf="@id/edt_title"
+                app:layout_constraintTop_toBottomOf="@+id/txt13" />
+
+            <LinearLayout
+                android:id="@+id/lin_line1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:alpha="0.12"
+                android:background="@color/colorBlack"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/linearLayout"
+                app:layout_constraintStart_toStartOf="@id/linearLayout"
+                app:layout_constraintTop_toBottomOf="@+id/edt_description" />
+
+            <ui_element.MyTextView
+                android:id="@+id/txt10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:alpha="@dimen/subhedingalpha"
+                android:gravity="right"
+                android:text="اطلاعات تماس"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/textView5"
+                app:layout_constraintTop_toBottomOf="@+id/lin_line1" />
+
+            <ui_element.MyTextView
+                android:id="@+id/txt11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:alpha="@dimen/subhedingalpha"
+                android:gravity="right"
+                android:text="شماره موبایل"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/txt10" />
+
+            <EditText
+                android:id="@+id/edt_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="شماره موبایل شما"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:textColor="@color/gray_dark"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@id/edt_title"
+                app:layout_constraintStart_toStartOf="@id/txt11"
+                app:layout_constraintTop_toBottomOf="@+id/txt11" />
+
+            <ui_element.MyTextView
+                android:id="@+id/txt12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:alpha="@dimen/subhedingalpha"
+                android:gravity="right"
+                android:text="ایمیل"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/edt_phone" />
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="ایمیل شما(email@gmail.com)"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/gray_dark"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@id/edt_title"
+                app:layout_constraintStart_toStartOf="@id/txt12"
+                app:layout_constraintTop_toBottomOf="@+id/txt12" />
+
+            <LinearLayout
+                android:id="@+id/lin_line2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:alpha="0.12"
+                android:background="@color/colorBlack"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_email" />
+
+            <ui_element.MyButton
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="24dp"
+                android:elevation="2dp"
+                android:text="ثبت کارت ویزیت"
+                android:textColor="@color/white"
+                android:theme="@style/PrimaryButton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lin_line2" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>

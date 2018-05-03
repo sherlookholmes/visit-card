@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/product_list_main"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="rtl">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:id="@+id/linearLayout2">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/white"
+            android:text=" انتخاب استان"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dp"
+            android:id="@+id/eeta_submit"
+            android:scaleType="centerInside"
+            android:layout_marginLeft="10dp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/category_listView"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:focusable="false"
+        android:dividerHeight="1dp"
+        android:focusableInTouchMode="false"
+        android:layout_below="@+id/linearLayout2"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:id="@+id/progressLayout"
+        android:layout_below="@id/linearLayout2"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBarCircularIndeterminate"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:background="@color/colorPrimary"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

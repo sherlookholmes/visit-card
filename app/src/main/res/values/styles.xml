@@ -1,0 +1,25 @@
+<resources>
+    <!-- declare the theme name that's actually applied in the manifest file -->
+    <!-- declare the theme name that's actually applied in the manifest file -->
+    <style name="MyTheme" parent="MyTheme.Base"></style>
+
+    <style name="MyTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@xml/background_activity</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+
+    <style name="PrimaryButton" parent="Theme.AppCompat">
+        <item name="colorButtonNormal">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+    </style>
+
+    <style name="transparentstatusbar" parent="MyTheme">
+
+        <item name="android:windowTranslucentStatus">true</item>
+
+    </style>
+
+</resources>

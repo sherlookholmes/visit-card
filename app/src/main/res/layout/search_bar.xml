@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="42dp"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layoutDirection="rtl"
+    app:cardElevation="3dp"
+    app:cardCornerRadius="2dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="2">
+
+    <ImageView
+        android:id="@+id/img_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="right|center"
+        android:src="@drawable/ic_arrow_forward_black_24dp"
+        android:textColor="@color/gray_dark"
+        android:textSize="24sp"
+        android:visibility="gone"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@color/gray_lighter"
+            app:cardCornerRadius="2dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardElevation="2dp">
+
+            <ui_element.MyEditText
+                android:id="@+id/edt_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:paddingRight="16dp"
+                android:textSize="@dimen/item_heading_size"
+                android:hint="جستجو..."
+                android:imeOptions="actionSearch"
+                android:background="@android:color/transparent"
+                android:inputType="text" />
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

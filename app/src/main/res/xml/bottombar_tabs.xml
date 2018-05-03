@@ -1,0 +1,18 @@
+<tabs>
+
+    <tab
+        id="@+id/navigation_home"
+        icon="@drawable/ic_home_black_24dp"
+        title="خانه"/>
+
+    <tab
+        id="@+id/navigation_cats"
+        icon="@drawable/ic_format_list_numbered_black_24dp"
+        title="دسته بندی"/>
+
+    <tab
+        id="@+id/navigation_profile"
+        icon="@drawable/ic_playlist_add_black_24dp"
+        title="ثبت کارت"/>
+
+</tabs>

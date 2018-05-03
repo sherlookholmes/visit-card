@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="layout_padding">24dp</dimen>
+    <dimen name="height_list_item">135dp</dimen>
+    <dimen name="width_image_list_item">150dp</dimen>
+    <dimen name="item_margin">12dp</dimen>
+    <dimen name="item_heading_size">25sp</dimen>
+    <dimen name="item_heading_height">72dp</dimen>
+    <dimen name="item_caption_size">15sp</dimen>
+    <dimen name="layout_mines_padding">-24dp</dimen>
+
+</resources>

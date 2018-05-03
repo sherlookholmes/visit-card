@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Android</string>
+    <string name="search_title">جستجو</string>
+    <string name="please_wait">چند لحظه صبر کنید</string>
+    <string name="snackbar_text">آگهی شما با موفقیت ثبت شد</string>
+    <string name="snackbar_action">action</string>
+
+    <string-array name="price_array">
+        <item>لطفا انتخاب کنید</item>
+        <item>قیمت مورد نظر</item>
+        <item>مجانی</item>
+        <item>توافقی(تماس بگیرید)</item>
+        <item>برای معاوضه</item>
+    </string-array>
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">بعدی</string>
+    <string name="skip">بلدم</string>
+    <string name="start">شروع کنید</string>
+    <string name="slide_1_title">ثبت آگهی</string>
+    <string name="slide_1_desc">نیازمندی های خود را با بقیه به اشتراک بگذارید</string>
+    <string name="slide_2_title">یافتن آگهی </string>
+    <string name="slide_2_desc">نیازمندی های خود را به آسانی پیدا کنید</string>
+    <string name="slide_3_title">دادزن الکترونیکی</string>
+    <string name="slide_3_desc">ما نیازهای شما را داد میزنیم</string>
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+
+</resources>
